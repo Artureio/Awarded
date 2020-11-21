@@ -1,9 +1,12 @@
-<!doctype html>
+<?php
+session_start();
+
+?>
+<!DOCTYPE html>
 <html lang="pt-br">
-  <head>
-    <title>Awarded</title>
-    <!-- Meta tags Obrigatórias -->
-    <meta charset="utf-8">
+<head>
+ <!-- Meta tags Obrigatórias -->
+ <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!--Fontes-->
@@ -18,55 +21,53 @@
 
     <!-- Estilo customizado -->
     <link rel="stylesheet" type="text/css" href="style.css">
-  </head>
-
-  <body id="login-fundo">
+</head>
+<body id="login-fundo">
+    <?php
+        if(isset($_SESSION['msg'])){
+            echo $_SESSION['msg'];
+            unset($_SESSION['msg']);
+        }
+    ?>
     <div class="container">
-        <div class="row" id="conteudo"><!--Logo + Slogan-->
+        <div class="row" id="conteudo">
             <div class="col-md-6 text-light mt-4">
                 <img src="img/logo.png" width="200" id="login-logo">
                 <h1 class="display-1 text-center font-weight-bold ">Awarded!</h1>
-                <p class="text-center ">O mundo gamer está aqui</p>
-            </div><!--Fim Slogan-->
+                <p class="text-center ">O mundo gamer está aqui</p>  
+            </div>
 
-          <div class="col-md-6" id="login-col"><!--Formulário Login-->
-              <div class="login-form">
-                  <form action="verifica.php" method="post">
-                    <h2 class="text-center">Log in</h2>
-                    <div class="form-group">
-                      <input type="text" class="form-control" name="login" placeholder="Username" required="required">
-                    </div>
-                    <div class="form-group">
-                      <input type="password" class="form-control" name="senha" placeholder="Password" required="required">
-                    </div>
-                    <div class="form-group">
-                      <button type="submit" class="btn btn-success btn-block font-weight-bold">Entrar</button>
-                    </div>
-                    <div class="clearfix">
-                      <label class="float-left form-check-label"><input type="checkbox"> Lembrar</label>
-                      <a href="#" class="float-right">Esqueceu a Senha?</a>
-                  
-                    </div>
-                  </form>
+            <div class="col-md-6" id="login-col">
+                <div class="login-form">
+                    <form class="" b4 action="processa.php" method="post">
+                        <h2 class="text-center">Cadastro</h2>
+                        <div class="form-group">
+                            <h5>
+                                Login
+                            </h5>
+                            <small class="text-muted" id="login-cadastro"></small>
+                            <input class="form-control" type="text" name="login" id="login" >
+                        </div>
+                        <div class="form-group">
+                            <h5>Senha</h5>
+                            <small class="text-muted" id="senha-cadastro"></small>
 
-                  <div class="cadastro "><!--Cadastro-->
-                    
-                    <h3 class="text-center mt-4 ">Não é membro?</h2>
-                      <a href="cadastro.php">
-                        <button type="submit"  class="btn btn-success btn-block text-light font-weight-bold">Crie Conta</button>
-                      </a>
-                  </div>
-                  
-                  
-              </div>
-          </div> 
+                            <input class="form-control" type="password" name="senha" id="senha" >
+                        </div>
+                        <div class="form-group">
+                             <input type="submit" class="btn btn-success btn-block font-weight-bold" value="Cadastrar">
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+
+            
         </div>
-          
     </div>
-
-          
-          <!-- Footer -->
-          <footer class="footer fixed-bottom">
+    
+    <!-- Footer -->
+    <footer class="footer fixed-bottom">
             <div class="container   text-white">
               <div class="row d-flex justify-content-around ">
                 <div class="footer-widget  programadores ">
@@ -128,6 +129,5 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
   </body>
+</body>
 </html>
-
-
