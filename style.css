@@ -5,10 +5,12 @@
 
 #corpo-index{
     background-image: url("img/fundo.png")  ;
-    background-color:#107c10;
     margin: 0;
     padding:0 ;
-
+}
+#home{
+    box-shadow: 0 0 10px rgba(0,0,0,.07), 4px 4px 10px rgba(0,0,0,.3);
+    border: 1px solid rgba(0, 0, 0, 0.5);
 }
 
 header{
@@ -71,7 +73,6 @@ header{
 }
 .separador h1{
     font-family: 'Montserrat', sans-serif;
-    border: 1px solid red;
     height: 5rem;
     text-anchor: middle;
     text-align: center;
