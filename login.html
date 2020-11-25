@@ -21,52 +21,54 @@
   </head>
 
   <body id="login-fundo">
-    <div class="container">
-        <div class="row" id="conteudo"><!--Logo + Slogan-->
-            <div class="col-md-6 text-light mt-4">
-                <img src="img/logo.png" width="200" id="login-logo">
-                <h1 class="display-1 text-center font-weight-bold ">Awarded!</h1>
-                <p class="text-center ">O mundo gamer está aqui</p>
-            </div><!--Fim Slogan-->
-
-          <div class="col-md-6" id="login-col"><!--Formulário Login-->
-              <div class="login-form">
-                  <form action="verifica.php" method="post">
-                    <h2 class="text-center">Log in</h2>
-                    <div class="form-group">
-                      <input type="text" class="form-control" name="login" placeholder="Username" required="required">
-                    </div>
-                    <div class="form-group">
-                      <input type="password" class="form-control" name="senha" placeholder="Password" required="required">
-                    </div>
-                    <div class="form-group">
-                      <button type="submit" class="btn btn-success btn-block font-weight-bold">Entrar</button>
-                    </div>
-                    <div class="clearfix">
-                      <label class="float-left form-check-label"><input type="checkbox"> Lembrar</label>
-                      <a href="#" class="float-right">Esqueceu a Senha?</a>
-                  
-                    </div>
-                  </form>
-
-                  <div class="cadastro "><!--Cadastro-->
-                    
-                    <h3 class="text-center mt-4 ">Não é membro?</h2>
-                      <a href="cadastro.php">
-                        <button type="submit"  class="btn btn-success btn-block text-light font-weight-bold">Crie Conta</button>
-                      </a>
-                  </div>
-                  
-                  
-              </div>
-          </div> 
+    <div class="container-fluid position-fixed">
+      <div class="  d-flex justify-content-center  " id="conteudo">
+        <!--Logo + Slogan-->
+        <div class=" d-none d-lg-block mr-5 text-light mt-4 text-center ">
+          <img src="img/logo.png" width="200" id="login-logo">
+          <h1 class="display-1  font-weight-bold ">Awarded!</h1>
+          <p class=" ">O mundo gamer está aqui</p>
         </div>
-          
+        <!--Fim Slogan-->
+  
+        <div class="" id="login-col">
+          <!--Formulário Login-->
+          <div class="login-form">
+            <form action="verifica.php" method="post">
+              <h2 class="text-center">Log in</h2>
+              <div class="form-group">
+                <input type="text" class="form-control" name="login" placeholder="Username" required="required">
+              </div>
+              <div class="form-group">
+                <input type="password" class="form-control" name="senha" placeholder="Password" required="required">
+              </div>
+              <div class="form-group">
+                <button type="submit" class="btn btn-success btn-block font-weight-bold">Entrar</button>
+              </div>
+              <div class="clearfix">
+                <label class="float-left form-check-label"><input type="checkbox"> Lembrar</label>
+                <a href="#" class="float-right">Esqueceu a Senha?</a>
+  
+              </div>
+            </form>
+  
+            <div class="cadastro ">
+              <!--Cadastro-->
+  
+              <h3 class="text-center mt-4 ">Não é membro?</h2>
+                <a href="cadastro.php">
+                  <button type="submit" class="btn btn-success btn-block text-light font-weight-bold">Crie Conta</button>
+                </a>
+            </div>
+          </div>
+        </div>
+      </div>
+  
     </div>
 
           
           <!-- Footer -->
-          <footer class="footer fixed-bottom">
+          <footer class="footer fixed-bottom d-none  d-sm-block">
             <div class="container   text-white">
               <div class="row d-flex justify-content-around ">
                 <div class="footer-widget  programadores ">

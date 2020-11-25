@@ -29,15 +29,15 @@ session_start();
             unset($_SESSION['msg']);
         }
     ?>
-    <div class="container">
-        <div class="row" id="conteudo">
-            <div class="col-md-6 text-light mt-4">
+    <div class="container-fluid position-fixed">
+        <div class="d-flex justify-content-center" id="conteudo">
+            <div class="d-none d-lg-block mr-5 text-light mt-4 text-center">
                 <img src="img/logo.png" width="200" id="login-logo">
-                <h1 class="display-1 text-center font-weight-bold ">Awarded!</h1>
-                <p class="text-center ">O mundo gamer está aqui</p>  
+                <h1 class="display-1 font-weight-bold ">Awarded!</h1>
+                <p class=" ">O mundo gamer está aqui</p>  
             </div>
 
-            <div class="col-md-6" id="login-col">
+            <div class="" id="login-col">
                 <div class="login-form">
                     <form class="" b4 action="processa.php" method="post">
                         <h2 class="text-center">Cadastro</h2>
@@ -67,7 +67,7 @@ session_start();
     </div>
     
     <!-- Footer -->
-    <footer class="footer fixed-bottom">
+    <footer class="footer fixed-bottom d-none  d-sm-block">
             <div class="container   text-white">
               <div class="row d-flex justify-content-around ">
                 <div class="footer-widget  programadores ">
