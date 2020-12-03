@@ -1,0 +1,75 @@
+<html lang="pt-br">
+	<head>
+		
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+		<!--Datadables CSS-->
+		<link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css">
+		
+		<!--Jquery-->
+		<script src="https://code.jquery.com/jquery-3.3.1.js"></script> 	
+		
+		<!--DataTable JQuery-->
+		<script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script> <!--DataTable JQuery-->
+        
+        <!--Bootstrap-->
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+		<!--Fontes-->
+		<link rel="preconnect" href="https://fonts.gstatic.com">
+		<link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,500;1,300;1,600&display=swap" rel="stylesheet">
+        
+        <!-- Estilo customizado -->
+		<link rel="stylesheet" type="text/css" href="style.css">
+
+		<title>Tabela de Notícias - Admin</title>
+        
+		<!-- Script para fazer a biblioteca funcionar-->
+		<script type="text/javascript" language="javascript">
+            $(document).ready(function() {
+              $('#listar-usuario').DataTable({			
+                "processing": true,
+                "serverSide": true,
+                "ajax": {
+							"url": "proc_pesq_noticias.php",
+							"type": "POST"
+						}
+              });
+            });
+		</script>
+	</head>
+	<body id="corpo-index">
+		<div class="container p-5 mt-5 bg-light">
+			<h1 class="display-5 text-center">Listar Blog</h1>
+			<div class="row mt-3 mb-3">
+			  <div class="col-md-6">
+				<a name="" id="" class="btn btn-primary" href="novanoticia.php" role="button">
+				  Nova notícia
+				</a>
+			  </div>              
+			</div>
+			<table id="listar-usuario" class="display" style="width:100%">
+				<thead>		<!--Cabeçalhos da tabela-->
+					<tr>
+					  <th>Id</th>			<!--Campo ID -->
+					  <th>Título</th>		<!--Campo titulo -->
+					  <th>Autor</th>		<!--Campo autor -->
+					  <th>Criado em</th>	<!--campo data-->
+					  <th>Visualizações</th><!--campo visualizacoes-->
+					</tr>
+				</thead>					<!--FIM Cabeçalhos da tabela-->
+				<tbody>						<!--Corpo da tabela-->
+				</tbody>					<!--FIM Corpo da tabela-->  
+				<tfoot>						<!--Rodapé da tabela-->
+					<th>Id</th>				<!--Campo ID -->
+					<th>Título</th>			<!--Campo titulo -->
+					<th>Autor</th>			<!--Campo autor -->
+					<th>Criado em</th>		<!--campo data-->
+					<th>Visualizações</th>	<!--campo visualizacoes-->
+				</tfoot>					<!--FIM Rodapé da tabela-->
+			</table>		
+		</div>
+	</body>
+</html>

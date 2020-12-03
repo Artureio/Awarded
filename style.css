@@ -40,7 +40,8 @@ header{
     background: url(img/fundo.png) ,
                 #107c10
                 ;
-    position: fixed;
+    background-attachment: fixed;
+    position: absolute;
 }
 .caixa{
     padding: 60px 0;
@@ -51,7 +52,7 @@ header{
     
 }
 #conteudo{
-     
+    margin: 10% 0 0 0;
 }
 .login-form {
     width: 340px;
@@ -76,11 +77,11 @@ header{
     font-weight: bold;
 }
 .separador h1{
+    margin-bottom:7rem;
     font-family: 'Montserrat', sans-serif;
-    height: 5rem;
     text-anchor: middle;
     text-align: center;
-    padding-top: 1rem;
+    padding-bottom: 1rem;
 }
 /*Cards*/
 #cards p, #cards h1{

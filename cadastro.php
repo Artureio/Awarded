@@ -31,7 +31,7 @@ session_start();
     ?>
     <div class="container-fluid position-fixed">
         <div class="d-flex justify-content-center" id="conteudo">
-            <div class="d-none d-lg-block mr-5 text-light mt-4 text-center">
+            <div class="d-none d-lg-block mr-5 text-light text-center">
                 <img src="img/logo.png" width="200" id="login-logo">
                 <h1 class="display-1 font-weight-bold ">Awarded!</h1>
                 <p class=" ">O mundo gamer está aqui</p>  
