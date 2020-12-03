@@ -19,7 +19,7 @@
 
 	</head>
 	<body id="corpo-index">
-		<?php
+        <?php
 			require('conexao.php');
 			
             $dados = filter_input_array(INPUT_POST, FILTER_DEFAULT);
@@ -35,10 +35,10 @@
             //executa o statement
             $statement->execute();
             $statement->close();
-
             
             if(!empty($dados['sendCadNoticia'])){
                 unset($dados['sendCadNoticia']);
+               // echo "<script>alert('Notícia Adicionada!'); history.back();</script>";
             }
                         
             
