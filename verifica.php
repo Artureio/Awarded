@@ -25,7 +25,7 @@ else{
 		// -- obtendo retorno
 		$row = $queryExec->fetch_assoc() ;
 		if( $senha == $row["senha"] ) {
-			header("Location: admin.html");
+			header("Location: admin.php");
 		}else{
 			echo "<script>alert('Usuário e senha não correspondem.'); history.back();</script>";
         }

@@ -58,7 +58,7 @@
             } 
         ?>
         <div class="container border p-5 mt-5 bg-light">
-            <a name="" id="" class="btn btn-info small" href="admin.html" role="button">< voltar</a>
+            <a name="" id="" class="btn btn-info small" href="admin.php" role="button">< voltar</a>
             <h1 class="display-5 text-center">Cadastrar notícia</h1>
             <form action="" name="cadNoticia" method="POST" enctype="multipart/form-data">
                 <div class="form-row">
