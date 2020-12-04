@@ -31,16 +31,17 @@
             
             //o parametro 's' significa que você está passando uma string. É como um printf...
             $statement->bind_param("sss", $dados['titulo'], $dados['autor'], $dados['texto']); 
-
+        
             //executa o statement
             $statement->execute();
+            
             $statement->close();
             
             if(!empty($dados['sendCadNoticia'])){
                 unset($dados['sendCadNoticia']);
                // echo "<script>alert('Notícia Adicionada!'); history.back();</script>";
             }
-                        
+                     
             
             if(isset($_FILES['imagem']))
             {

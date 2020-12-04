@@ -38,7 +38,19 @@ if(($resultado_usuario) AND ($resultado_usuario->num_rows != 0)){
 					<td><?php echo $row_usuario['autor']; ?></td>
 					<td><?php echo $row_usuario['data']; ?></td>
 					<td><?php echo $row_usuario['visualizacoes']; ?></td>
-					<td><?php echo '<a href="update_noticia.php" class="btn small float_left btn-warning"><i class="fas fa-user-edit"></i></a> <a href="deletar_noticias.php" class="btn small float_right btn-danger"><i class="fas fa-trash-alt"></i></a>'; ?></td>
+					<td><?php 
+							echo 	'<a href="update_noticia.php?id='.$row_usuario["ID"].'"
+									class="btn small float_left btn-warning">
+										<i class="fas fa-user-edit"></i>
+									</a> 
+									<a href="deletar_noticias.php?id=' . $row_usuario["ID"] .'"
+									class="btn small float_right btn-danger">
+										<i class="fas fa-trash-alt">
+										</i>
+									</a>'
+							; 
+						?>
+					</td>
 				</tr>
 				<?php
 			}?>
